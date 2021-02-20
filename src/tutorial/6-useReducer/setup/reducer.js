@@ -1,6 +1,12 @@
+// reducer function
+// this function looks for two things the state right before the update and the action
+// you ALWAYS want to return some kind of new state from your reducer
+// you deal with the state in the reducer
+// it's less prone to errors
 export const reducer = (state, action) => {
   if (action.type === "ADD_ITEM") {
     const newPeople = [...state.people, action.payload];
+    // take all the values of the state and change the ones you need to
     return {
       ...state,
       people: newPeople,
